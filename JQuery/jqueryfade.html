@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery-Fade</title>
+</head>
+<body>
+    <!--<script src="https://code.jquery.com/jquery-3.6.3.js" 
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+ 
+
+    <p>Web Developer Eğitimi</p>
+     <!--Fade-->
+   
+        
+     <button id="fidein">Fade In</button>
+     <button id="fideout">Fade Out</button>
+     <button id="fideto">Fade To</button>
+     <button id="fadetoggle">Fade Toggle</button>
+
+     <script>
+        $(document).ready(function(){
+            $("#fadein").click(function(){
+                $("p").fadeIn("slow");
+            });
+            $("#fadeout").click(function(){
+                $("p").fadeOut("slow");
+            });
+        });
+
+       
+
+        $(document).ready(function(){
+            $("#fadeto").click(function(){
+                $("p").fadeTo("slow"); //paragrafı hem saklar hem gösterir.
+
+
+
+            });
+        });
+        
+        $(document).ready(function(){
+            $("#fadetoggle").click(function(){
+                $("p").fadeToggle("slow"); //paragrafı hem saklar hem gösterir.
+
+
+
+            });
+        });
+     </script>
+</body>
+</html>

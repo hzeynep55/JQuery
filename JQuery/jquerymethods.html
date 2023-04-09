@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+
+    <style>
+        .highLight{
+            background-color: greenyellow;
+        }
+        .green{
+            background-color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" 
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>
+     <div>
+    <h1>JQuery Helper Methods</h1>
+    <ul>
+        <li>Jquery Selector</li>
+        <li>Jquery Methods</li>
+        <li>Jquery Animations</li>
+    </ul>
+    </div>
+    <div>
+    <img src="C:\Users\User\OneDrive\Masaüstü\Gorseller\nature.jpg" alt="manzara">
+    </div>
+
+    <div>
+    <!--<input id="name" type="text" placeholder="Fullname" value="JQuery val Fonksiyonu"/>-->
+    <input id="name" type="text" placeholder="Firstname" />
+    <input id="surname" type="text" placeholder="Lastname" class="green" />
+    <button id="btnSave" onclick="fullname();">Save</button>
+    </div>
+    <script>
+        
+        console.log($("h1").text());
+        console.log($("ul").text());
+        //console.log($("li").text());
+        console.log($("ul li").text());
+
+        $("h1").text("JQuery"); //h1'e değer atadık. Başlık değişti.
+        console.log($("input").val()) //val() value değerini seçer
+        //$("input").val("Zeynep"); // val değeri değişti.
+
+        $("img").attr("width","400");
+
+        function fullname(){
+            var firstname=$("#name").val();
+            var lastname=$("#surname").val();
+
+            console.log("Firstname and Lastname: "+firstname+" "+lastname);
+
+            $("#name").addClass("highLight"); //class ekler
+            // $("#name").toggleClass("highLight"); //highLight eklenmişsse çıkartır. eklenmemişse ekler.
+            $("#surname").removeClass("green"); //green class'ı silinir.
+
+        }
+    </script>
+</body>
+</html>

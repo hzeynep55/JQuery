@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" 
+    integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" 
+    crossorigin="anonymous"></script>
+
+    <h3 id="header">JQuery</h3>
+    <ul id="liste">
+        <li class="item">jquery reference</li>
+        <li  class="item">selectors</li>
+        <li>jquery plugins<a href="#">Link</a></li>
+    </ul>
+
+    <ul id>
+        <li class="item">jquery reference</li>
+        <li  class="item">selectors</li>
+        <li>jquery plugins<a href="#">Link</a></li>
+    </ul>
+    
+    <script>
+        /*console.log($("#liste"));
+        console.log($("h3"));
+        console.log($("ul"));
+        console.log($("li"));
+        console.log($(".item"));
+        console.log($("a"));
+        console.log($("li a"));
+        console.log($("ul li a"));
+        console.log($("#liste a"));*/
+
+        
+        document.getElementById("header").style.color="red";
+
+        //jquery
+        $("#header").css("color","blue");
+        $('#liste a').css("text-decoration", "none"); //sadece liste id sine sahip olan linkte işlem gördü
+        $('a').css("text-decoration", "none"); 
+
+        var styles={
+            color:"green",
+            fontsize: "20 px",
+            border:"1px solid red"
+
+
+        }
+        $("ul li").css(styles);
+
+        $("a").css({
+            color:"yellow",
+            fontsize: "20 px",
+            border:"1px solid red"
+
+        });
+        
+        //javascript
+        var listeler=document.querySelectorAll("li");
+        for(var i=0; i<listeler.length; i++){
+            listeler[i].style.color="red";
+        }
+        
+    </script>
+</body>
+</html>
